@@ -4,6 +4,7 @@ import indexRouter from './routes/indexRouter.js';
 import sendMessageRouter from './routes/sendMessageRouter.js';
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/errorHandler.js';
+import notFoundHandler from './middleware/notFoundHandler.js';
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.use(logger);
 app.use("/sendMessage", sendMessageRouter);
 
 app.use("/", indexRouter);
+
+app.use(notFoundHandler);
 
 app.use(errorHandler);
 
