@@ -3,6 +3,7 @@ import path from 'path';
 import indexRouter from './routes/indexRouter.js';
 import sendMessageRouter from './routes/sendMessageRouter.js';
 import logger from './middleware/logger.js';
+import errorHandler from './middleware/errorHandler.js';
 
 const app = express();
 
@@ -16,6 +17,8 @@ app.use(logger);
 app.use("/sendMessage", sendMessageRouter);
 
 app.use("/", indexRouter);
+
+app.use(errorHandler);
 
 const PORT = 3000;
 
