@@ -1,10 +1,8 @@
+import messages from "../db.js"
+
 const indexController = (req, res, next) => {
     try {
-        res.render("index", {title : "Mini Messageboard", 
-            messages : [ {user : 'Jonas Kahnwald'}, 
-                         {text : 'Death is forever inevitably before us'},
-                         {added: new Date()}
-                        ]});
+        res.render("index", {title : "Mini Messageboard", messages : messages});
     } catch (error) {
         next (error);
     }
