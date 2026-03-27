@@ -14,9 +14,12 @@
         <% messages.forEach( m => { %>
             <li>
                 <article>
-                    <h2>
-                        <%= m.user %>
-                    </h2>
+                    <div class="user-info">
+                        <img src="<%= m.image %>" alt="<%= m.user %>">
+                        <h2>
+                            <%= m.user %>
+                        </h2>
+                    </div>
                     <h3>
                         <%= m.text %>
                     </h3>

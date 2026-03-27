@@ -2,6 +2,7 @@ const messages = [
     {
         text: "What we know is a drop, what we don't know is an ocean.",
         user: "Adam",
+        image: "/images/adam.avif",
         added: new Date()
     },
     {
