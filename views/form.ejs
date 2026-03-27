@@ -1,28 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send a New Message</title>
-</head>
-<body>
-    <header>
-        <h1>Form</h1>
-    </header>
-    <section aria-label="form-section">
-        <form method="POST" action="/sendMessage">
-            <div>
-                <label for="user">User:</label>
-                <input type="text" id="user" name="user" placeholder="Random Citizen">
-            </div>
+<section aria-label="form-section">
+    <form method="POST" action="/">
+        <div>
+            <label for="user">User:</label>
+            <input type="text" id="user" name="user" placeholder="Random Citizen">
+        </div>
 
-            <div>
-                <label for="messageText">Message:</label>
-                <input type="text" id="messageText" name="messageText" placeholder="What year is it?">
-            </div>
+        <div>
+            <label for="messageText">Message:</label>
+            <input type="text" id="messageText" name="messageText" placeholder="What year is it?">
+        </div>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-</body>
-</html>
+        <button type="submit">Submit</button>
+    </form>
+</section>
