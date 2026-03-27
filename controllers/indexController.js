@@ -15,6 +15,7 @@ const postIndexController = (req, res, next) => {
         messages.push({
             text : messageText,
             user,
+            image: "/images/avatar.avif",
             added : new Date()
         });
 
