@@ -1,6 +1,6 @@
 import messages from "../db.js"
 
-const indexController = (req, res, next) => {
+const getIndexController = (req, res, next) => {
     try {
         res.render("index", {title : "Mini Messageboard", messages : messages});
     } catch (error) {
@@ -8,4 +8,20 @@ const indexController = (req, res, next) => {
     }
 };
 
-export default indexController;
+const postIndexController = (req, res, next) => {
+    try {
+        const { user, messageText } = req.body;
+
+        messages.push({
+            text : messageText,
+            user,
+            added : new Date()
+        });
+
+        res.redirect("/");
+    } catch (error) {
+        next(error);
+    }
+}
+
+export {getIndexController, postIndexController};
