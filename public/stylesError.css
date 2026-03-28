@@ -36,7 +36,7 @@ h1 {
 h2 {
   font-size: 4rem;
   font-weight: 900;
-  background: linear-gradient(to right, #3b82f6, #8b5cf6); /* Um toque de cor sutil */
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
